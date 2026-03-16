@@ -42,7 +42,7 @@ export const CellOutputSchema = z.object({
   type: CellOutputTypeSchema,
   data: z.unknown(),
   mimeType: z.string().optional(),
-  metadata: z.record(z.unknown()).optional(),
+  metadata: z.record(z.string(), z.unknown()).optional(),
 });
 export type CellOutput = z.infer<typeof CellOutputSchema>;
 
@@ -54,7 +54,7 @@ export const CellSchema = z.object({
   outputs: z.array(CellOutputSchema).default([]),
   status: CellStatusSchema.default('idle'),
   executionCount: z.number().int().nonnegative().optional(),
-  metadata: z.record(z.unknown()).optional(),
+  metadata: z.record(z.string(), z.unknown()).optional(),
   tags: z.array(z.string()).optional(),
 });
 export type Cell = z.infer<typeof CellSchema>;
@@ -77,7 +77,7 @@ export const NotebookMetadataSchema = z.object({
   description: z.string().optional(),
   author: z.string().optional(),
   tags: z.array(z.string()).optional(),
-  kernel: KernelInfoSchema.default({}),
+  kernel: KernelInfoSchema.default({ name: 'typescript', language: 'typescript' }),
   createdAt: z.number().optional(),
   updatedAt: z.number().optional(),
   version: z.string().default('1.0.0'),
@@ -88,7 +88,7 @@ export type NotebookMetadata = z.infer<typeof NotebookMetadataSchema>;
 export const NotebookSchema = z.object({
   id: z.string(),
   cells: z.array(CellSchema),
-  metadata: NotebookMetadataSchema.default({}),
+  metadata: NotebookMetadataSchema.default({ version: '1.0.0', kernel: { name: 'typescript', language: 'typescript' } }),
 });
 export type Notebook = z.infer<typeof NotebookSchema>;
 
@@ -190,7 +190,7 @@ export const PipelineStepSchema = z.object({
   startedAt: z.number().optional(),
   completedAt: z.number().optional(),
   error: z.string().optional(),
-  metadata: z.record(z.unknown()).optional(),
+  metadata: z.record(z.string(), z.unknown()).optional(),
 });
 export type PipelineStep = z.infer<typeof PipelineStepSchema>;
 
@@ -296,6 +296,6 @@ export const AnalysisReportSchema = z.object({
   statistics: z.array(DescriptiveStatsSchema).optional(),
   charts: z.array(ChartSpecSchema).optional(),
   createdAt: z.number(),
-  metadata: z.record(z.unknown()).optional(),
+  metadata: z.record(z.string(), z.unknown()).optional(),
 });
 export type AnalysisReport = z.infer<typeof AnalysisReportSchema>;
