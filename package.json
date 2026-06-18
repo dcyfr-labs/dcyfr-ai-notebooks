@@ -48,6 +48,9 @@
   "dependencies": {
     "zod": "^4.4.3"
   },
+  "overrides": {
+    "js-yaml": "^4.2.0"
+  },
   "devDependencies": {
     "@types/node": "^25.9.3",
     "@changesets/changelog-github": "^0.7.0",
