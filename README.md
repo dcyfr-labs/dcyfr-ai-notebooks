@@ -4,8 +4,8 @@
   tlp_clearance: GREEN
   status: deprecated
   name: dcyfr-ai-notebooks
-  description: Data science notebook toolkit with TypeScript tooling for Jupyter notebook management, data pipelines, and visualization
-  last_validated: 2026-03-29
+  description: Data science notebook toolkit with TypeScript tooling for computational notebooks, data pipelines, and visualization
+  last_validated: 2026-07-11
 -->
 
 > **⚠️ PACKAGE DEPRECATED & NO LONGER MAINTAINED (February 27, 2026)**  
@@ -22,9 +22,9 @@
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/dcyfr-labs/dcyfr-ai-notebooks)
 
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626?style=flat-square&logo=jupyter&logoColor=white)](https://jupyter.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Status](https://img.shields.io/badge/Status-Deprecated-red?style=flat-square)](https://github.com/dcyfr/dcyfr-ai-notebooks)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![CI](https://github.com/dcyfr-labs/dcyfr-ai-notebooks/actions/workflows/ci.yml/badge.svg)](https://github.com/dcyfr-labs/dcyfr-ai-notebooks/actions/workflows/ci.yml)
+[![Status](https://img.shields.io/badge/Status-Deprecated-red?style=flat-square)](https://github.com/dcyfr-labs/dcyfr-ai-notebooks)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 
 ~~Data science notebook toolkit for TypeScript~~ **DEPRECATED: No longer maintained**
@@ -35,8 +35,8 @@
 
 - **DCYFR** is a registered trademark of DCYFR Labs.
 - Primary domain: [www.dcyfr.ai](https://www.dcyfr.ai)
-- Trademark guidance: [../TRADEMARK.md](../TRADEMARK.md)
 - Licensing details: [LICENSE](./LICENSE)
+- Security policy: [SECURITY.md](./SECURITY.md)
 
 ## Features
 
@@ -51,7 +51,7 @@
 
 ```bash
 # Clone or use as part of the DCYFR workspace
-git clone https://github.com/dcyfr/dcyfr-ai-notebooks
+git clone https://github.com/dcyfr-labs/dcyfr-ai-notebooks
 npm install
 ```
 
@@ -155,25 +155,40 @@ console.log("Trend:", sparkline([120, 150, 180, 200]));
 
 ```bash
 # Data exploration
-npx tsx examples/data-exploration/index.ts
+npm run example:explore    # or: npx tsx examples/data-exploration/index.ts
 
 # Data pipeline
-npx tsx examples/data-pipeline/index.ts
+npm run example:pipeline   # or: npx tsx examples/data-pipeline/index.ts
 
 # Model analysis
-npx tsx examples/model-analysis/index.ts
+npm run example:analysis   # or: npx tsx examples/model-analysis/index.ts
 ```
+
+## Documentation
+
+- **[docs/API.md](docs/API.md)** — Full API reference
+- **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** — Design and module architecture
+- **[docs/DEVELOPMENT.md](docs/DEVELOPMENT.md)** — Development workflow
+
+## Environment Variables
+
+The library reads **no environment variables** — nothing in `src/` or `examples/` consumes them. `.env.example` contains reference values only (several, like `JUPYTER_PORT` and `OPENAI_API_KEY`, are vestigial: there is no Jupyter or OpenAI integration in this package).
 
 ## Development
 
 ```bash
 npm install
-npm run test          # Run tests
-npm run test:watch    # Watch mode
+npm run test:run      # Run tests once
+npm run test          # Watch mode (vitest)
 npm run test:coverage # Coverage report
+npm run lint          # Lint
 npm run build         # Build
 npm run typecheck     # Type check
 ```
+
+## Contributing
+
+Contributions welcome! See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
 ## License
 
