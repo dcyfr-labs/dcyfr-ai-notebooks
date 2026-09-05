@@ -1,8 +1,37 @@
 {
   "repo_notes": [
     {
-      "content": "Jupyter notebook environment for AI experimentation and development. Document the notebook organization, common patterns, ML experiment tracking, visualization helpers, and integration with the DCYFR AI framework.",
-      "author": "DCYFR Engineering"
+      "content": "Deprecated on npm as of 2026-02-27 and explicitly no longer maintained. The first page must say so plainly.",
+      "author": "rei-doc-specialist"
+    },
+    {
+      "content": "Experimental throughout. Prefer describing what the code does over recommending it.",
+      "author": "rei-doc-specialist"
+    }
+  ],
+  "pages": [
+    {
+      "title": "Status and Overview",
+      "purpose": "That this package is deprecated and unmaintained, the alternatives named in the README, and what the toolkit was for."
+    },
+    {
+      "title": "Notebook Model",
+      "purpose": "The notebook and cell abstractions under src/notebook/: document structure, cell types and execution order.",
+      "parent": "Status and Overview"
+    },
+    {
+      "title": "Pipelines",
+      "purpose": "The data pipeline layer under src/pipeline/: dataset loading, transforms, and the statistics helpers.",
+      "parent": "Status and Overview"
+    },
+    {
+      "title": "Visualization",
+      "purpose": "The visualization module under src/visualization/: chart types supported and the output format produced.",
+      "parent": "Status and Overview"
+    },
+    {
+      "title": "Utilities and Testing",
+      "purpose": "The helpers under src/utils/ and the Vitest suite covering cells, datasets, transforms, statistics and the runner."
     }
   ]
 }
