@@ -46,7 +46,7 @@
   },
   "homepage": "https://github.com/dcyfr-labs/dcyfr-ai-notebooks#readme",
   "dependencies": {
-    "zod": "^4.5.4"
+    "zod": "^4.6.2"
   },
   "overrides": {
     "js-yaml": "^4.3.1"
