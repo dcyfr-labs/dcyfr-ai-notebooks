@@ -33,7 +33,7 @@
 
 `@dcyfr/ai-notebooks` is maintained by **DCYFR Labs** as part of the DCYFR experimentation toolkit portfolio.
 
-- **DCYFR** is a trademark of DCYFR Labs.
+- **DCYFR** is a trademark of Drew Gowan.
 - Primary domain: [www.dcyfr.ai](https://www.dcyfr.ai)
 - Licensing details: [LICENSE](./LICENSE)
 - Security policy: [SECURITY.md](./SECURITY.md)
