@@ -1770,6 +1770,6 @@ function compareNotebooks(nb1: Notebook, nb2: Notebook): void {
 
 **Last Updated:** February 8, 2026  
 **Documentation Version:** 1.0.0  
-**Repository:** https://github.com/dcyfr/dcyfr-ai-notebooks  
-**Issues:** https://github.com/dcyfr/dcyfr-ai-notebooks/issues  
+**Repository:** https://github.com/dcyfr-labs/dcyfr-ai-notebooks  
+**Issues:** https://github.com/dcyfr-labs/dcyfr-ai-notebooks/issues  
 **License:** MIT

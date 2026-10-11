@@ -17,7 +17,7 @@ Do not use "DCYFR" trademarks in ways that imply endorsement without permission.
 ## Development Setup
 
 ```bash
-git clone https://github.com/dcyfr/dcyfr-ai-notebooks.git
+git clone https://github.com/dcyfr-labs/dcyfr-ai-notebooks.git
 cd dcyfr-ai-notebooks
 npm install
 npm test
