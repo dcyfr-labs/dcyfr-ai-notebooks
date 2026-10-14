@@ -46,3 +46,7 @@ npm test
 - Prefer explicit return types on public functions
 - Use Zod schemas for runtime validation
 - Keep functions small and focused
+
+## Code of Conduct
+
+Participation is governed by the [DCYFR Labs Code of Conduct](https://github.com/dcyfr-labs/.github/blob/main/CODE_OF_CONDUCT.md).
