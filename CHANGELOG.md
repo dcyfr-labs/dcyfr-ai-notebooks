@@ -55,7 +55,7 @@
   **Documentation:**
 
   - [API Reference](docs/API.md) — 4,440 words, comprehensive examples
-  - [Security Guide](docs/SECURITY.md) — 28,867 bytes, best practices
+  - [Security Guide](SECURITY.md) — 28,867 bytes, best practices
 
 ## 0.1.1
 
